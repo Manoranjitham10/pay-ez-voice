@@ -83,13 +83,15 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-success': 'var(--gradient-success)',
-				'gradient-voice': 'var(--gradient-voice)'
+				'gradient-voice': 'var(--gradient-voice)',
+				'gradient-accent': 'var(--gradient-accent)'
 			},
 			boxShadow: {
 				'sm': 'var(--shadow-sm)',
 				'md': 'var(--shadow-md)',
 				'lg': 'var(--shadow-lg)',
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'yellow': 'var(--shadow-yellow)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',

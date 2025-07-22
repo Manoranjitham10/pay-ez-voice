@@ -121,7 +121,7 @@ export const BalanceDisplay: React.FC<BalanceDisplayProps> = ({
         </div>
 
         {/* USDC Balance */}
-        <div className="bg-gradient-success p-4 rounded-lg text-success-foreground">
+        <div className="bg-gradient-accent p-4 rounded-lg text-accent-foreground shadow-yellow">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm opacity-90">USD Coin (USDC)</p>
@@ -139,7 +139,7 @@ export const BalanceDisplay: React.FC<BalanceDisplayProps> = ({
               </p>
             </div>
             <div className="text-right">
-              <Badge variant="secondary" className="bg-white/20 text-white">
+              <Badge variant="secondary" className="bg-black/20 text-black">
                 Stablecoin
               </Badge>
             </div>
