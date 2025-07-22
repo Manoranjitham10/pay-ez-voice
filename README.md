@@ -1,73 +1,274 @@
-# Welcome to your Lovable project
+# PayEZ - Voice-Enabled Crypto Wallet 🎙️💰
 
-## Project info
+> Making cryptocurrency accessible for everyone through voice commands
 
-**URL**: https://lovable.dev/projects/2c437e3e-94bf-4901-bc86-d4a9a07a5b3d
+PayEZ is a Progressive Web App (PWA) that provides a voice-first interface for cryptocurrency transactions, specifically designed for visually impaired users, elderly individuals, and Web3 beginners who want an easier way to interact with stablecoins like USDC.
 
-## How can I edit this code?
+![PayEZ Logo](public/icon-512.png)
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+### 🎙️ Voice Commands
+- **"Check balance"** - Get your current wallet balance spoken aloud
+- **"Send [X] USDC to [Name/Address]"** - Initiate USDC transfers with voice
+- **"Show transaction history"** - Review your recent transactions
+- **Real-time voice feedback** - Audio responses for all interactions
+- **Error handling** - Clear guidance for unclear or invalid commands
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2c437e3e-94bf-4901-bc86-d4a9a07a5b3d) and start prompting.
+### 🔐 Security & Accessibility
+- **MetaMask Integration** - Secure wallet connection via ethers.js
+- **High Contrast Design** - Optimized for visual accessibility
+- **Large Touch Targets** - Easy interaction for motor accessibility
+- **Voice-First Interface** - Primary interaction through speech
+- **Biometric Auth Ready** - Framework for fingerprint/face recognition
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📱 Progressive Web App
+- **Installable** - Add to home screen on mobile devices
+- **Offline Capable** - Core functionality works without internet
+- **Responsive Design** - Optimized for mobile and desktop
+- **Fast Loading** - Optimized performance for all devices
 
-**Use your preferred IDE**
+### 🌐 Blockchain Support
+- **Ethereum Compatible** - Works with all EVM-compatible networks
+- **Testnet Ready** - Configured for Polygon Mumbai and Base Goerli
+- **USDC Integration** - Specialized for stablecoin transactions
+- **Real-time Balance Updates** - Live balance and transaction tracking
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🎨 Design System
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+PayEZ features a carefully crafted design system optimized for accessibility:
 
-Follow these steps:
+- **Colors**: Purple primary (#a855f7), bright yellow accents, pure white background
+- **Typography**: High contrast, large readable fonts
+- **Layout**: Spacious, touch-friendly interface
+- **Animations**: Smooth, purposeful transitions
+- **Voice States**: Visual indicators for listening, processing, and responding
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Quick Start
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Prerequisites
+- Node.js 18+ and npm
+- MetaMask browser extension
+- Modern web browser with speech recognition support
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Installation
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd payez-voice-wallet
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   ```
+   http://localhost:8080
+   ```
+
+### 🔧 Environment Setup
+
+For production deployment, configure these environment variables:
+
+```env
+# Blockchain Network Configuration
+VITE_NETWORK_NAME=polygon-mumbai
+VITE_RPC_URL=your-rpc-endpoint
+
+# API Keys (store securely)
+VITE_SPEECH_API_KEY=your-speech-api-key
 ```
 
-**Edit a file directly in GitHub**
+## 📖 Usage Guide
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Getting Started
 
-**Use GitHub Codespaces**
+1. **Connect Wallet**
+   - Click "Connect MetaMask"
+   - Approve connection in MetaMask popup
+   - Your wallet address and balance will display
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. **Enable Voice Commands**
+   - Allow microphone access when prompted
+   - Tap the microphone button to start listening
+   - Speak clearly and wait for audio confirmation
 
-## What technologies are used for this project?
+3. **Voice Command Examples**
+   ```
+   "Check my balance"
+   "What's my balance?"
+   "Send 10 USDC to John"
+   "Transfer 25 dollars to 0x123..."
+   "Show my transaction history"
+   "Display recent transactions"
+   ```
 
-This project is built with:
+### Voice Command Patterns
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+PayEZ understands natural language patterns:
 
-## How can I deploy this project?
+**Balance Commands:**
+- "Check balance" / "Show balance"
+- "What's my balance?" / "How much money do I have?"
+- "Tell me my balance"
 
-Simply open [Lovable](https://lovable.dev/projects/2c437e3e-94bf-4901-bc86-d4a9a07a5b3d) and click on Share -> Publish.
+**Send Commands:**
+- "Send [amount] USDC to [recipient]"
+- "Transfer [amount] dollars to [address]"
+- "Pay [recipient] [amount] USDC"
 
-## Can I connect a custom domain to my Lovable project?
+**History Commands:**
+- "Show transaction history"
+- "Display recent transactions"
+- "What are my last transactions?"
 
-Yes, you can!
+## 🛠️ Technology Stack
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Frontend
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Vite** - Fast build tool and dev server
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Blockchain
+- **ethers.js** - Ethereum wallet and contract interaction
+- **MetaMask** - Secure wallet connection
+- **EVM Compatible** - Works with Ethereum, Polygon, Base, etc.
+
+### Voice & Audio
+- **Web Speech API** - Browser-native speech recognition
+- **Speech Synthesis API** - Text-to-speech responses
+- **Real-time Processing** - Immediate voice feedback
+
+### PWA Features
+- **Service Worker** - Offline functionality
+- **Web App Manifest** - Installable experience
+- **Responsive Design** - Mobile-first approach
+
+## 🏗️ Development
+
+### Project Structure
+```
+src/
+├── components/
+│   ├── voice/              # Voice input and command processing
+│   ├── wallet/             # Wallet connection and balance display
+│   ├── transaction/        # Transaction history and management
+│   └── layout/             # App header and navigation
+├── hooks/                  # Custom React hooks
+├── lib/                    # Utility functions
+└── pages/                  # Route components
+```
+
+### Key Components
+
+- **VoiceInput** - Speech recognition and microphone control
+- **VoiceCommandProcessor** - Natural language command parsing
+- **WalletConnection** - MetaMask integration and connection
+- **BalanceDisplay** - Wallet balance with voice readout
+- **TransactionHistory** - Transaction list with voice summary
+
+### Building for Production
+
+```bash
+# Build the application
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Testing Voice Features
+
+1. **Microphone Access**: Ensure browser allows microphone access
+2. **Speech Recognition**: Test in Chrome/Edge (best support)
+3. **Voice Commands**: Speak clearly and wait for visual feedback
+4. **Audio Output**: Verify text-to-speech responses work
+
+## 🚀 Deployment
+
+### PWA Deployment
+
+1. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy to hosting platform** (Vercel, Netlify, etc.)
+   - Upload `dist/` folder
+   - Configure routing for SPA
+   - Enable HTTPS (required for PWA features)
+
+3. **Test PWA features**
+   - Install prompt on mobile
+   - Offline functionality
+   - Voice commands
+
+### Testnet Deployment
+
+PayEZ is configured for testnets:
+
+- **Polygon Mumbai** - Free test MATIC for gas
+- **Base Goerli** - Coinbase's L2 testnet
+- **Ethereum Goerli** - Main Ethereum testnet
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how to get started:
+
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes**
+4. **Test thoroughly** (especially voice features)
+5. **Submit a pull request**
+
+### Contribution Guidelines
+
+- **Accessibility First** - Ensure all features work with screen readers
+- **Voice Testing** - Test voice commands in different environments
+- **Mobile Responsive** - Verify functionality on mobile devices
+- **Clean Code** - Follow TypeScript and React best practices
+
+## 🛡️ Security
+
+PayEZ prioritizes security:
+
+- **No Private Key Storage** - Uses MetaMask for key management
+- **HTTPS Required** - All production deployments use HTTPS
+- **Input Validation** - Validates all voice commands and addresses
+- **Testnet First** - Always test on testnets before mainnet
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **Ethereum Foundation** - For the Web3 ecosystem
+- **MetaMask** - For secure wallet integration
+- **Tailwind CSS** - For the design system
+- **React Team** - For the incredible framework
+- **Web Speech API** - For making voice interfaces possible
+
+## 📞 Support
+
+- **GitHub Issues** - Bug reports and feature requests
+- **Documentation** - Check the docs for detailed guides
+- **Community** - Join our discussions
+
+---
+
+**PayEZ** - Making crypto accessible for everyone, one voice command at a time. 🎙️✨
+
+*Built with ❤️ for accessibility and inclusion in Web3*
