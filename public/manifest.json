@@ -4,7 +4,7 @@
   "description": "A voice-enabled crypto wallet making stablecoins accessible for everyone",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8fafc",
+  "background_color": "#ffffff",
   "theme_color": "#a855f7",
   "orientation": "portrait-primary",
   "icons": [

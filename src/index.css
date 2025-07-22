@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* Base colors - clean white background with high contrast */
-    --background: 255 255 255;
+    /* Base colors - pure white background */
+    --background: 0 0% 100%;
     --foreground: 30 27 75;
 
     /* Card system */
