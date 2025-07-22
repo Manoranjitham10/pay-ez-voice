@@ -2,41 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* PayEZ Design System - Voice-first, accessibility-focused crypto wallet */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - high contrast for accessibility */
+    --background: 248 250 252;
+    --foreground: 15 23 42;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card system */
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover system */
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - trustworthy blue for financial security */
+    --primary: 219 78% 39%;
+    --primary-foreground: 248 250 252;
+    --primary-hover: 219 78% 34%;
+    --primary-glow: 219 78% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - calm gray for secondary actions */
+    --secondary: 215 20% 65%;
+    --secondary-foreground: 15 23 42;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Success - clear green for positive actions */
+    --success: 142 76% 36%;
+    --success-foreground: 255 255 255;
+    --success-glow: 142 76% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warning - amber for caution */
+    --warning: 38 92% 50%;
+    --warning-foreground: 15 23 42;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Error - red for errors and danger */
+    --error: 0 84% 60%;
+    --error-foreground: 255 255 255;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Muted colors */
+    --muted: 210 40% 96%;
+    --muted-foreground: 64 64 64;
 
-    --radius: 0.5rem;
+    /* Accent colors */
+    --accent: 219 78% 95%;
+    --accent-foreground: 15 23 42;
+
+    /* Voice interaction colors */
+    --voice-active: 219 78% 39%;
+    --voice-listening: 142 76% 36%;
+    --voice-processing: 38 92% 50%;
+    --voice-error: 0 84% 60%;
+
+    /* Border and input */
+    --border: 215 14% 89%;
+    --input: 215 14% 89%;
+    --ring: 219 78% 39%;
+
+    /* Gradients for visual appeal */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-glow)));
+    --gradient-voice: linear-gradient(135deg, hsl(var(--voice-active)), hsl(var(--primary-glow)));
+
+    /* Shadows for depth */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(var(--primary) / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 20px hsl(var(--primary-glow) / 0.3);
+
+    /* Animation timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 

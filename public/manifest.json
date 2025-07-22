@@ -1,0 +1,65 @@
+{
+  "name": "PayEZ - Voice-Enabled Crypto Wallet",
+  "short_name": "PayEZ",
+  "description": "A voice-enabled crypto wallet making stablecoins accessible for everyone",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Check Balance",
+      "short_name": "Balance",
+      "description": "Check your wallet balance",
+      "url": "/?action=balance",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Voice Commands",
+      "short_name": "Voice",
+      "description": "Use voice commands",
+      "url": "/?action=voice",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "320x640",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x640",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}
